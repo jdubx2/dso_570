@@ -35,3 +35,8 @@ plot <- usage %>% group_by(Term, Day, Time) %>%
     guides(fill = guide_colorbar(barheight = 23))
 
 ggsave(file="util.svg", plot=plot, width=7, height=6.5, bg = 'transparent')
+
+#-------------------------------------------------------------------------------#
+
+usage %>% filter(Term == 20171) %>% 
+  group_by()
