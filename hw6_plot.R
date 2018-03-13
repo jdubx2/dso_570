@@ -13,7 +13,9 @@ ggplot(data.frame(x=c(0,500)), aes(x))+
   geom_segment(aes(x=0,y=0,xend=150,yend=120*150/130), arrow = arrow(length = unit(.3,"cm")), size = 1.1)+
   theme_bw()+
   theme(panel.grid = element_blank(),
-        plot.margin = margin(1,1,.5,.5, unit = 'cm'))+
+        plot.margin = margin(1,1,.5,.5, unit = 'cm'),
+        panel.border = element_blank(),
+        axis.line = element_line())+
   labs(x = 'Full Sized', y = 'Compact') +
   stat_function(fun= function(x) 510-(2*x), geom = 'line', linetype='longdash', color = 'blue')+
   geom_point(aes(x = 183, y = 144), size = 2, color = 'blue')
